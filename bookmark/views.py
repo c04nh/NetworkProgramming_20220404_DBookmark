@@ -12,5 +12,5 @@ class BookmarkListView(ListView):
 class BookmarkCreateView(CreateView):
     model = Bookmark
     fields = ['name', 'url']
-    template_name = '_create'
+    template_name_suffix = '_create'
     success_url = reverse_lazy('bookmark:list')
