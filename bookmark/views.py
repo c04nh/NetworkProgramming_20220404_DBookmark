@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, DetailView, UpdateView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 
 from bookmark.models import Bookmark
 
@@ -23,3 +23,7 @@ class BookmarkUpdateView(UpdateView):
     fields = ['name', 'url']
     template_name_suffix = '_update'
     # success_url = reverse_lazy('bookmark:list')
+
+class BookmarkDeleteView(DeleteView):
+    model = Bookmark
+    success_url = reverse_lazy('bookmark:list')
