@@ -1,11 +1,15 @@
+{% extends 'base.html' %}
+
 {% block title %}Delete{% endblock %}
 
 {% block content %}
 <body>
 <form action="" method="post">
     {% csrf_token %}
-    너 북마크 {{ bookmark }} 진짜 지울 거야?
-    <input type="submit" value="진짜 삭제">
-    <input type="button" value="지우지마" onclick="history.back();">
+    <div class="alert alert-danger">
+        너 북마크 {{ bookmark }} 진짜 지울 거야?
+    </div>
+    <input type="submit" value="진짜 삭제" class="btn btn-danger">
+    <input type="button" value="지우지마" class="btn btn-light" onclick="history.back();">
 </form>
 {% endblock %}
