@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% block title %}Delete{% endblock %}
+
+{% block content %}
 <body>
 <form action="" method="post">
     {% csrf_token %}
@@ -11,5 +8,4 @@
     <input type="submit" value="진짜 삭제">
     <input type="button" value="지우지마" onclick="history.back();">
 </form>
-</body>
-</html>
+{% endblock %}
