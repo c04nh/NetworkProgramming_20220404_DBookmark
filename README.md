@@ -52,3 +52,4 @@
     - python manage.py migrate bookmark
       - admin 사이트에서 로그인 후 Profile 하나 추가하고
       - 기존 북마크에 profile 지정하자
+  - accounts/admin ProfileAdmin
