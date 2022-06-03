@@ -24,6 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-n6u1y%(pk@wf%mp2mx7@6#bhex9*80*c=n&ezch%9t)sl^y7-!'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = 'django-insecure-n6u1y%(pk@wf%mp2mx7@6#bhex9*80*c=n&ezch%9t)sl^y7-!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG') == 'True'
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark',
+    'accounts',
 ]
 
 MIDDLEWARE = [
