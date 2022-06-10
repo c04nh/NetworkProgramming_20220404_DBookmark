@@ -53,6 +53,9 @@
       - admin 사이트에서 로그인 후 Profile 하나 추가하고
       - 기존 북마크에 profile 지정하자
   - accounts/admin ProfileAdmin
-  RegisterForm(UserCreationForm)
+  - register
+    - accounts/forms RegisterForm(UserCreationForm)
     - accounts/views register
     - DBookmark/urls, accounts/urls accounts:register
+    - accounts/templates/accounts register, register_done
+      - bookmark/ templates/boormark boormark_list
