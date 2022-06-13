@@ -61,3 +61,4 @@
       - bookmark/ templates/boormark boormark_list
   - login, logout
     - accounts/forms LoginForm
+    - accounts/views my_login, my_logout
