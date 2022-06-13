@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} logout {% endblock %}
+
+{% block content %}
+    로그인 실패.
+    <p><a href="{% url 'accounts:register' %}">register</a> </p>
+    <p><a href="{% url 'accounts:login' %}">login</a> </p>
+{% endblock %}
