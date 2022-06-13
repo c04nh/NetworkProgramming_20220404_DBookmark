@@ -59,3 +59,5 @@
     - DBookmark/urls, accounts/urls accounts:register
     - accounts/templates/accounts register, register_done
       - bookmark/ templates/boormark boormark_list
+  - login, logout
+    - accounts/forms LoginForm
