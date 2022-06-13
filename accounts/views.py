@@ -12,7 +12,7 @@ def register(request):
             return render(request, 'accounts/register_done.html', {'profile': profile})
     else:
         form = RegisterForm()
-        return render(request, 'accounts/register.html', {'form': form})
+    return render(request, 'accounts/register.html', {'form': form})
 
 def my_login(request):
     if request.method == 'POST':
