@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
@@ -21,7 +22,7 @@ class BookmarkListView(ListView):
             bookmark_list = Bookmark.objects.none()
         return bookmark_list
 
-class BookmarkCreateView(CreateView):
+class BookmarkCreateView(LoginRequiredMixin, CreateView):
     model = Bookmark
     fields = ['profile', 'name', 'url']
     template_name_suffix = '_create'
@@ -33,15 +34,15 @@ class BookmarkCreateView(CreateView):
         profile = Profile.objects.get(user=user)
         return {'profile': profile}
 
-class BookmarkDetailView(DetailView):
+class BookmarkDetailView(LoginRequiredMixin, DetailView):
     model = Bookmark
 
-class BookmarkUpdateView(UpdateView):
+class BookmarkUpdateView(LoginRequiredMixin, UpdateView):
     model = Bookmark
     fields = ['name', 'url']
     template_name_suffix = '_update'
     # success_url = reverse_lazy('bookmark:list')
 
-class BookmarkDeleteView(DeleteView):
+class BookmarkDeleteView(LoginRequiredMixin, DeleteView):
     model = Bookmark
     success_url = reverse_lazy('bookmark:list')

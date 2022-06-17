@@ -68,3 +68,8 @@
     - bookmark/views BookmarkListView get_queryset(), BookmarkCreateView get_initial()
     - bookmark/templates/bookmark bookmark_create profile 숨기자
     - accounts/templates/accounts add login link in register_done
+    - 로그인 요구하기
+      - FBV: @login_required
+        - accounts/views my_logout
+      - CBV: (LoginRequiredMixin, )
+        - bookmark/view BookmarkCreateView, BookmarkDetailView, BookmarkUpdateView, BookmarkDeleteView
