@@ -73,3 +73,5 @@
         - accounts/views my_logout
       - CBV: (LoginRequiredMixin, )
         - bookmark/view BookmarkCreateView, BookmarkDetailView, BookmarkUpdateView, BookmarkDeleteView
+    - 로그인 요구할 때 이동할 URL setting
+      - settings LOGIN_URL
