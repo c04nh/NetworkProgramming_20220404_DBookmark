@@ -75,3 +75,4 @@
         - bookmark/view BookmarkCreateView, BookmarkDetailView, BookmarkUpdateView, BookmarkDeleteView
     - 로그인 요구할 때 이동할 URL setting
       - settings LOGIN_URL
+    - 로그인 후 REDIRECT_FIELD_NAME으로 이동하자
